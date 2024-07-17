@@ -80,3 +80,24 @@
 
 .question-card{
 }
+.question{
+  text-align: start;
+}
+.options{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.options label{
+  margin: 5px;
+}
+.button-submit{
+  background-color: green;
+  padding: 10px 50px;
+}
+
+.exam-result-card{
+  color: red;
+  font-size: 20px;
+  font-weight: 700;
+}
+.exam-result-text{}
