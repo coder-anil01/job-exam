@@ -102,3 +102,7 @@
   font-weight: 700;
 }
 .exam-result-text{}
+
+.successfull{
+  color: green !important;
+}

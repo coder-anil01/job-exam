@@ -1,6 +1,9 @@
 import { useState } from 'react'
 import './App.css'
-import Exampaper from './Exampaper'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Homepage from './Homepage';
+import Examfail from './Examfail';
+
 
 function App() {
 
@@ -13,15 +16,14 @@ function App() {
 
   return (
     <>
-      {ExamStart ? 
-      <form className="input-form">
-        <input type="i'd Number" required placeholder="i'd Number" className='input-field'/>
-        <input type="number" required placeholder="Enter Register Number" className='input-field'/>
-        <button className='Submt-button' onClick={sartExam}>Submit</button>
-      </form>
-      : <Exampaper/>}
-      {/* <Exampaper/> */}
+      <Router>
+        <Routes>
+          <Route path="/" exact element={<Homepage/>}/>
+          <Route path="/codersajan" exact element={<Examfail/>}/>
+        </Routes>
+    </Router>
     </>
+    
   )
 }
 
